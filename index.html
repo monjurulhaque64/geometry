@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+        <div class="navbar bg-base-100 mt-8 px-8 bg-gray-200 rounded-xl">
+            <div class="flex-1">
+              <h1> <span class="text-3xl font-semibold">Interactive</span> <br> Geometry Genius</h1>
+            </div>
+            <div class="flex-none gap-2">
+              <div class="form-control">
+                <button id="btn-blog" class="btn btn-primary bg-sky-500 w-24 mt-4 px-4">Blog</button>
+              </div>
+            </div>
+          </div>
+    </header>
+    <main>
+        <section class="mt-5 flex flex-col lg:flex-row md:flex-row">
+            <div class="w-[70%] grid lg:grid-cols-3 md:grid-cols-2 gap-4 ml-5 mb-10">
+                <!-- triangle card -->
+                <div class="card w-full bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                      <img src="./images/triangle.png" class="rounded-xl w-60 h-48" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 id="triangle-value-name" class="card-title ">Triangle</h2>
+                      <p>Area (A) = 0.5 X b X h</p>
+                      <div class="grid grid-cols-4">
+                        <input id="triangle-value-b" class="bg-gray-200 rounded-md" type="text" placeholder=" b">
+                        <p>cm</p>
+                        <input id="triangle-value-h" class="bg-gray-200 rounded-md" type="text" placeholder=" h">
+                        <p>cm</p>
+                      </div>
+                      <div class="card-actions">
+                        <button id="btn-triangle" class="btn btn-primary bg-sky-500 w-64 mt-4">Calculate</button>
+                      </div>
+                    </div>
+                </div>
+                <!-- rectangle card -->
+                <div class="card w-full bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                      <img src="./images/rectangle.png" class="rounded-xl w-60 h-48" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 id="rectangle-value-name" class="card-title">Rectangle</h2>
+                      <p>Area (A) = w X l</p>
+                      <div class="grid grid-cols-4">
+                        <input id="rectangle-value-w" class="bg-gray-200 rounded-md" type="text" placeholder=" w">
+                        <p>cm</p>
+                        <input id="rectangle-value-l"  class="bg-gray-200 rounded-md" type="text" placeholder=" l">
+                        <p>cm</p>
+                      </div>
+                      <div class="card-actions">
+                        <button id="btn-ractangle" class="btn btn-primary bg-sky-500 w-64 mt-4">Calculate</button>
+                      </div>
+                    </div>
+                </div>
+                <!-- parallelogram card -->
+                <div class="card w-full bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                      <img src="./images/parallelogram.png" class="rounded-xl w-60 h-48" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 id="parallelogram-value-name" class="card-title">Parallelogram</h2>
+                      <p>Area (A) =  b X h</p>
+                      <div class="grid grid-cols-4">
+                        <input id="parallelogram-value-b" class="bg-gray-200 rounded-md" type="text" placeholder=" b">
+                        <p>cm</p>
+                        <input id="parallelogram-value-h" class="bg-gray-200 rounded-md" type="text" placeholder=" h">
+                        <p>cm</p>
+                      </div>
+                      <div class="card-actions">
+                        <button id="btn-parallelogram" class="btn btn-primary bg-sky-500 w-64 mt-4">Calculate</button>
+                      </div>
+                    </div>
+                </div>
+                <!-- rhombus card -->
+                <div class="card w-full bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                      <img src="./images/rhombus.png" class="rounded-xl w-60 h-48" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 id="rhombus-value-name" class="card-title">Rhombus</h2>
+                      <p>Area (A) = 0.5 X d&#8321; X d&#8322;</p>
+                      <div class="grid grid-cols-4">
+                        <input id="rhombus-value-d1" class="bg-gray-200 rounded-md" type="text" placeholder=" d&#8321;">
+                        <p>cm</p>
+                        <input id="rhombus-value-d2" class="bg-gray-200 rounded-md" type="text" placeholder=" d&#8322;">
+                        <p>cm</p>
+                      </div>
+                      <div class="card-actions">
+                        <button id="btn-rhombus" class="btn btn-primary bg-sky-500 w-64 mt-4">Calculate</button>
+                      </div>
+                    </div>
+                </div>
+                <!-- pentagon card -->
+                <div class="card w-full bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                      <img src="./images/pentagon.png" class="rounded-xl w-60 h-48" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 id="pentagon-value-name" class="card-title">Pentagon</h2>
+                      <p>Area (A) = 0.5 X p X b</p>
+                      <div class="grid grid-cols-4">
+                        <input id="pentagon-value-p" class="bg-gray-200 rounded-md" type="text" placeholder=" p">
+                        <p>cm</p>
+                        <input id="pentagon-value-b" class="bg-gray-200 rounded-md" type="text" placeholder=" b">
+                        <p>cm</p>
+                      </div>
+                      <div class="card-actions">
+                        <button id="btn-pentagon" class="btn btn-primary bg-sky-500 w-64 mt-4">Calculate</button>
+                      </div>
+                    </div>
+                </div>
+                <!-- ellipse card -->
+                <div class="card w-full bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                      <img src="./images/ellipse.png" class="rounded-xl w-60 h-48" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 id="ellipse-value-name" class="card-title">Ellipse</h2>
+                      <p>Area (A) = &#960;ab</p>
+                      <div class="grid grid-cols-4">
+                        <input id="ellipse-value-a" class="bg-gray-200 rounded-md" type="text" placeholder=" a">
+                        <p>cm</p>
+                        <input id="ellipse-value-b" class="bg-gray-200 rounded-md" type="text" placeholder=" b">
+                        <p>cm</p>
+                      </div>
+                      <div class="card-actions">
+                        <button id="btn-ellipse" class="btn btn-primary bg-sky-500 w-64 mt-4">Calculate</button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full md:w-[25%] lg:w-[25%] mx-auto sm:mt-10">
+                <h1 class="text-3xl text-center font-bold">Area Calculation</h1>
+                <div class="overflow-x-auto">
+                    <table class="table w-full">
+                      <!-- head -->
+                      <tbody id="table-container">
+                        <!-- row 1 -->
+                        <!-- <tr>
+                          <th>1</th>
+                          <td>Cy Ganderton</td>
+                          <td>Quality Control Specialist</td>
+                          <td><button class="btn btn-primary bg-sky-500 w-34 mt-4">Covert to m&#178;</button></td>
+                        </tr> -->
+                      </tbody>
+                    </table>
+                  </div>
+            </div>
+        </section>
+    </main>
+    <script src="./js/ulities.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
